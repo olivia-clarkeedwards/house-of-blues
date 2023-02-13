@@ -5,14 +5,9 @@
 const mainTitle = document.getElementById('main-title')
 const background = document.getElementById('background')
 const audioBG = document.getElementById('audio')
-const sayingsArray = [
-  'let it out',
-  "hey baby, don't worry,<br> it ain't nothing but the blues",
-  'let those teardrops fall',
-  'just cry, darling',
-]
 
 let count = 0
+const featureTime = 3
 const numEggs = 2 //to add a feature, increment this number by 1 and add feature to blueEasterEgg function in the switch statement
 
 document.onclick = changeBlues
@@ -20,7 +15,7 @@ document.onclick = changeBlues
 function changeBlues() {
   mainTitle.style.color = getRandomBlueColor()
   background.style.backgroundColor = getRandomBlueColor()
-  if (count == 5) {
+  if (count == featureTime) {
     blueEasterEgg()
     count = 0
   }
@@ -51,6 +46,13 @@ function blueEasterEgg() {
 function getRandom(max) {
   return Math.floor(Math.random() * max)
 }
+
+const sayingsArray = [
+  'let it out',
+  "hey baby, don't worry,<br> it ain't nothing but the blues",
+  'let those teardrops fall',
+  'just cry, darling',
+]
 
 function heyBaby() {
   mainTitle.innerHTML = sayingsArray[getRandom(sayingsArray.length - 1)]
