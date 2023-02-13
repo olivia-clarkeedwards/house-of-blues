@@ -4,6 +4,16 @@ Website that generates special features when clicked such as changing colour or 
 ## Bugs to fix: 
 - HTML background line at top of page
 
+## Current features: 
+- When page is clicked, background and main title change to random shades of blue.
+- When page is clicked the number of times determined by featureTime constant, a random feature is selected using a switch statement with a randomised parameter. 
+
+### heyBaby function 
+- selects a random saying to display from the sayingsArray
+
+### etta function 
+- plays "I'd Rather Go Blind" by Etta James by inserting an audio HTML tag into the inner HTML of a hidden paragraph function.
+
 ## Adding features:
 - Feel free to add new features.
 - Features are randomly selected by the blueEasterEggs function after a specified number of clicks. 
