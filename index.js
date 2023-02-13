@@ -1,6 +1,7 @@
-/*---------------------------------/
+/*--------------------------------------/
     Welcome to the house of blues 
-/---------------------------------*/
+/--------------------------------------*/
+// Copyright 2023 Olivia Clarke-Edwards. //
 
 const mainTitle = document.getElementById('main-title')
 const background = document.getElementById('background')
