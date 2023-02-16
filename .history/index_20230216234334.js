@@ -11,13 +11,15 @@ const btn = document.getElementById("btn");
 let count = 0;
 const featureTime = 3;
 const numEggs = 3; //to add a feature, increment this number by 1 and add feature to blueEasterEgg function in the switch statement
-let timer;
+let timer=;
 
 document.onclick = changeBlues;
-btn.addEventListener('click', (e) => {
-  e.stopPropagation(e);
-  removeTears()
-})
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  console.log(timer);
+  clearInterval(timer);
+  btn.style.display = "none";
+});
 
 function changeBlues() {
   mainTitle.style.color = getRandomBlueColor();
@@ -48,10 +50,10 @@ function blueEasterEgg() {
       break;
     case 2:
       heyBaby();
-        clearInterval(timer)
+      if (timer < 1) {
         timer = setInterval(generateTearDrops, 100);
         btn.style.display = "block";
-      
+      }
       break;
   }
   //add extra features here
@@ -75,7 +77,7 @@ function heyBaby() {
 function ettaJ() {
   if (!audioBG.classList.contains("etta")) {
     let ettaJames =
-      '<audio autoplay src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
+      '<audio autoplay loop src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
     audioBG.innerHTML = ettaJames;
     audioBG.classList.add("etta");
   }
@@ -87,9 +89,4 @@ function generateTearDrops(params) {
   drop.style.left = Math.random() * 100 + "vw";
   drop.style.animationDuration = Math.random() * 2 + 2 + "s";
   document.body.appendChild(drop);
-}
-
-function removeTears() {
-  clearInterval(timer);
-  btn.style.display = "none";
 }

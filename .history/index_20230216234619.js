@@ -14,10 +14,12 @@ const numEggs = 3; //to add a feature, increment this number by 1 and add featur
 let timer;
 
 document.onclick = changeBlues;
-btn.addEventListener('click', (e) => {
-  e.stopPropagation(e);
-  removeTears()
-})
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  console.log(timer);
+  clearInterval(timer);
+  btn.style.display = "none";
+});
 
 function changeBlues() {
   mainTitle.style.color = getRandomBlueColor();
@@ -75,7 +77,7 @@ function heyBaby() {
 function ettaJ() {
   if (!audioBG.classList.contains("etta")) {
     let ettaJames =
-      '<audio autoplay src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
+      '<audio autoplay loop src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
     audioBG.innerHTML = ettaJames;
     audioBG.classList.add("etta");
   }
@@ -87,9 +89,4 @@ function generateTearDrops(params) {
   drop.style.left = Math.random() * 100 + "vw";
   drop.style.animationDuration = Math.random() * 2 + 2 + "s";
   document.body.appendChild(drop);
-}
-
-function removeTears() {
-  clearInterval(timer);
-  btn.style.display = "none";
 }

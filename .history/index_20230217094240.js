@@ -14,9 +14,8 @@ const numEggs = 3; //to add a feature, increment this number by 1 and add featur
 let timer;
 
 document.onclick = changeBlues;
-btn.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
   e.stopPropagation(e);
-  removeTears()
 })
 
 function changeBlues() {

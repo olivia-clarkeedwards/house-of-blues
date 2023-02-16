@@ -14,10 +14,7 @@ const numEggs = 3; //to add a feature, increment this number by 1 and add featur
 let timer;
 
 document.onclick = changeBlues;
-btn.addEventListener('click', (e) => {
-  e.stopPropagation(e);
-  removeTears()
-})
+document.add
 
 function changeBlues() {
   mainTitle.style.color = getRandomBlueColor();
@@ -89,7 +86,8 @@ function generateTearDrops(params) {
   document.body.appendChild(drop);
 }
 
-function removeTears() {
+function removeTears(e) {
+  e.stopPropagation(e);
   clearInterval(timer);
   btn.style.display = "none";
 }
