@@ -14,7 +14,10 @@ const numEggs = 3; //to add a feature, increment this number by 1 and add featur
 let timer;
 
 document.onclick = changeBlues;
-btn.onclick = removeTearDrops;
+btn.addEventListener('click', (e) => {
+  e.stopPropagation(e);
+  removeTears()
+})
 
 function changeBlues() {
   mainTitle.style.color = getRandomBlueColor();
@@ -45,8 +48,10 @@ function blueEasterEgg() {
       break;
     case 2:
       heyBaby();
-     timer= setInterval(generateTearDrops, 100);
-      btn.style.display="block"
+        clearInterval(timer)
+        timer = setInterval(generateTearDrops, 100);
+        btn.style.display = "block";
+      
       break;
   }
   //add extra features here
@@ -84,7 +89,7 @@ function generateTearDrops(params) {
   document.body.appendChild(drop);
 }
 
-function removeTearDrops() {
+function removeTears() {
   clearInterval(timer);
   btn.style.display = "none";
 }
