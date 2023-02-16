@@ -31,16 +31,13 @@ button {
   position: absolute;
   bottom: 5%;
   right: 10%;
-  border-radius: 10px;
   border:none;
-  font-size:0.8rem;
   color: white;
   background-color: cornflowerblue;
+  font-size:0.8rem;
   cursor: pointer;
-}
+  border-radius: 10px;
 
-button:hover{
-  color:gainsboro
 }
 
 

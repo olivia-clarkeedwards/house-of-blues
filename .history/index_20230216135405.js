@@ -45,7 +45,7 @@ function blueEasterEgg() {
       break;
     case 2:
       heyBaby();
-     timer= setInterval(generateTearDrops, 100);
+     timer= setInterval(generateTearDrops, 200);
       btn.style.display="block"
       break;
   }

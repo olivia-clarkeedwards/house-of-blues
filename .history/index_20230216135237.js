@@ -45,7 +45,7 @@ function blueEasterEgg() {
       break;
     case 2:
       heyBaby();
-     timer= setInterval(generateTearDrops, 100);
+     timer= setInterval(generateTearDrops, 200);
       btn.style.display="block"
       break;
   }
@@ -70,7 +70,7 @@ function heyBaby() {
 function ettaJ() {
   if (!audioBG.classList.contains("etta")) {
     let ettaJames =
-      '<audio autoplay src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
+      '<audio autoplay loop controls src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
     audioBG.innerHTML = ettaJames;
     audioBG.classList.add("etta");
   }

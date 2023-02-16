@@ -35,6 +35,7 @@ function getRandomBlueColor() {
 
 function blueEasterEgg() {
   let randomEgg = getRandom(numEggs);
+  console.log(randomEgg);
   switch (randomEgg) {
     case 0:
       heyBaby();
@@ -43,10 +44,9 @@ function blueEasterEgg() {
       heyBaby();
       ettaJ();
       break;
-    case 2:
+    case 3:
       heyBaby();
-     timer= setInterval(generateTearDrops, 100);
-      btn.style.display="block"
+      setInterval(generateTearDrops, 200);
       break;
   }
   //add extra features here
@@ -65,12 +65,16 @@ const sayingsArray = [
 
 function heyBaby() {
   mainTitle.innerHTML = sayingsArray[getRandom(sayingsArray.length)];
+  if (mainTitle.innerHTML === "let those teardrops fall") {
+    timer = setInterval(generateTearDrops, 200);
+    btn.style.display = "block";
+  }
 }
 
 function ettaJ() {
   if (!audioBG.classList.contains("etta")) {
     let ettaJames =
-      '<audio autoplay src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
+      '<audio autoplay loop controls src="etta-james-id-rather-go-blind.wav" type="audio/wav" alt="Etta James - I\'d Rather Go Blind">No Sound</audio>';
     audioBG.innerHTML = ettaJames;
     audioBG.classList.add("etta");
   }

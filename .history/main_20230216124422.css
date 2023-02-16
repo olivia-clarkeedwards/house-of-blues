@@ -25,25 +25,11 @@ p {
 }
 
 button {
-  display: none;
-  width: 300px;
-  height: 30px;
   position: absolute;
-  bottom: 5%;
-  right: 10%;
-  border-radius: 10px;
-  border:none;
-  font-size:0.8rem;
-  color: white;
-  background-color: cornflowerblue;
-  cursor: pointer;
+  top: 60%;
+  left: 70%;
+  background-color: aliceblue;
 }
-
-button:hover{
-  color:gainsboro
-}
-
-
 
 .drop {
   width: 20px;

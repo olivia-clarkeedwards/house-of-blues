@@ -33,14 +33,11 @@ button {
   right: 10%;
   border-radius: 10px;
   border:none;
-  font-size:0.8rem;
   color: white;
   background-color: cornflowerblue;
-  cursor: pointer;
-}
 
-button:hover{
-  color:gainsboro
+  cursor: pointer;
+  
 }
 
 
